@@ -1,0 +1,8 @@
+% Теоретическая погрешность интерполяции
+theoretical_error = get_theoretical_error()
+
+% Интерполяционный многочлен Лагранжа
+lagrange_interpolation_polynomial = get_lagrange_interpolation_polynomial
+
+% Интерполяционный многочлен Ньютона
+newton_interpolation_polynomial = get_newton_interpolation_polynomial
