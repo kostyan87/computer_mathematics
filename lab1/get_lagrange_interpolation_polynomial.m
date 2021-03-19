@@ -4,7 +4,7 @@ function lagrange_interpolation_polynomial = get_lagrange_interpolation_polynomi
     lagrange_interpolation_polynomial = zeros(1, number_of_nodes);
     
     for i = 1:number_of_nodes
-        numerator = ones(1, 1);
+        numerator = [1];
         denumerator = 1;
         for j = 1:number_of_nodes
             if (i ~= j)
