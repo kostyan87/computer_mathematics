@@ -9,8 +9,20 @@ function main(x, fx)
     % Интерполяционный многочлен Ньютона
     newton_interpolation_polynomial = get_newton_interpolation_polynomial(x, fx)
 
-    % Разница между многочленом Ньютона и Лагранжа
-    % ...график...
+    % Рисуем графики
+    h = 0:0.001:length(x)*2;
+    % График функции
+    ezplot('(cos(x))^2 + 0.8*x - (sin(x))', [0 length(x)*2]), grid
+    hold on;
+    % Полином Лагранжа
+    plot(h, polyval(lagrange_interpolation_polynomial, h));
+    hold on;
+    % Полином Ньютона
+    plot(h, polyval(newton_interpolation_polynomial, h), 'r*');
+    hold on;
+    
+    % Теоретическая оценка погрешности интерполяции
+    theoretical_error
 
     % Сравнение полученной погрешности интерполяции с теоретической
    
