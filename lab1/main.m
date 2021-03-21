@@ -18,11 +18,14 @@ function main(x, fx)
     plot(h, polyval(lagrange_interpolation_polynomial, h));
     hold on;
     % Полином Ньютона
-    plot(h, polyval(newton_interpolation_polynomial, h), 'r*');
+    plot(0:0.1:length(x)*2, polyval(newton_interpolation_polynomial, 0:0.1:length(x)*2), 'r*');
     hold on;
     
     % Теоретическая оценка погрешности интерполяции
-    theoretical_error
+    theoretical_error = get_theoretical_error(x)
+    
+    % Практическая оценка погрешности интерполяции
+    practical_error = get_practical_error(5, lagrange_interpolation_polynomial)
 
     % Сравнение полученной погрешности интерполяции с теоретической
    
