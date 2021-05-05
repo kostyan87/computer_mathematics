@@ -1,0 +1,1 @@
+function y = cos(x) * cos(x) + 0.8 * x - sin(x)
